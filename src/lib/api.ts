@@ -1,5 +1,6 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-const RESOURCE = "sitemap";
+const version = "api/v1"
+const RESOURCE = `${version}/sitemap`;
 
 export async function startCrawl(url: string) {
   const res = await fetch(`${API_URL}/${RESOURCE}/crawl`, {
